@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perspectives from the Hart | Wilderness Photography & Fine Art</title>
+    <meta name="description" content="Award-winning wilderness photography. Fine art prints, fine art collections, and the quiet luxury of nature captured through an artist's lens.">
+    <meta name="theme-color" content="#1a1a1a">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #0a0a0a;
+            color: #e8e8e8;
+            font-family: 'Georgia', 'Garamond', serif;
+            line-height: 1.7;
+            letter-spacing: 0.4px;
+        }
+        
+        header {
+            background: #0a0a0a;
+            border-bottom: 1px solid #404040;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: #d4af8c;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            color: #8a8a8a;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            font-style: italic;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        nav a {
+            color: #c0c0c0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 6px;
+        }
+        
+        nav a:hover {
+            color: #d4af8c;
+            border-bottom-color: #d4af8c;
+        }
+        
+        .hero {
+            padding: 8rem 2rem;
+            text-align: center;
+            background: linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 100%);
+            border-bottom: 1px solid #2a2a2a;
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            color: #e8e8e8;
+        }
+        
+        .hero h1 span {
+            color: #d4af8c;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        .hero-description {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #b8b8b8;
+            font-size: 1rem;
+            line-height: 1.9;
+        }
+        
+        .gallery-section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2.3rem;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+            color: #e8e8e8;
+        }
+        
+        .section-title span {
+            color: #d4af8c;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #8a8a8a;
+            margin-bottom: 3rem;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .gallery-item {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+            border: 1px solid #3a3a3a;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            aspect-ratio: 4 / 5;
+            position: relative;
+        }
+        
+        .gallery-item:hover {
+            border-color: #d4af8c;
+            box-shadow: 0 8px 32px rgba(212, 175, 140, 0.15);
+            transform: translateY(-4px);
+        }
+        
+        .gallery-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6a6a6a;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .collections {
+            padding: 5rem 2rem;
+            background: linear-gradient(180deg, #0f0f0f 0%, #0a0a0a 100%);
+        }
+        
+        .collections-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .collection-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+            padding: 2.5rem 2rem;
+            border: 1px solid #3a3a3a;
+            border-left: 3px solid #d4af8c;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+        
+        .collection-card:hover {
+            background: linear-gradient(135deg, #252525 0%, #1a1a1a 100%);
+            border-left-color: #e8c4a0;
+            box-shadow: 0 12px 32px rgba(212, 175, 140, 0.1);
+            transform: translateY(-4px);
+        }
+        
+        .collection-card h3 {
+            color: #d4af8c;
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+        
+        .collection-card p {
+            color: #a8a8a8;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        .about-section {
+            padding: 5rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+            padding: 3rem;
+            border: 1px solid #3a3a3a;
+            border-left: 3px solid #d4af8c;
+        }
+        
+        .about-content h2 {
+            color: #d4af8c;
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+        
+        .about-content p {
+            color: #b8b8b8;
+            margin-bottom: 1.5rem;
+            line-height: 2;
+            font-size: 1rem;
+        }
+        
+        .about-content p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .process {
+            padding: 4rem 2rem;
+            background: linear-gradient(180deg, #0f0f0f 0%, #0a0a0a 100%);
+            text-align: center;
+        }
+        
+        .process-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .process-step {
+            padding: 2rem;
+        }
+        
+        .step-number {
+            font-size: 2.5rem;
+            color: #d4af8c;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+        
+        .step-title {
+            color: #d4af8c;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .step-description {
+            color: #8a8a8a;
+            font-size: 0.95rem;
+        }
+        
+        .contact-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            border-top: 1px solid #3a3a3a;
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .cta-button {
+            background: #d4af8c;
+            color: #0a0a0a;
+            padding: 1rem 2.5rem;
+            border: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 1.5rem;
+        }
+        
+        .cta-button:hover {
+            background: #e8c4a0;
+            box-shadow: 0 8px 24px rgba(212, 175, 140, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            background: #000000;
+            border-top: 1px solid #2a2a2a;
+            padding: 2.5rem;
+            text-align: center;
+            color: #707070;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Perspectives<br><span style="color: #d4af8c;">from the Hart</span></div>
+        <p class="tagline">Wilderness Photography & Fine Art</p>
+        <nav>
+            <a href="#gallery">Gallery</a>
+            <a href="#collections">Collections</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>The Quiet <span>Luxury of Wilderness</span></h1>
+        <p class="hero-subtitle">Fine Art Photography Capturing Nature's Majesty</p>
+        <p class="hero-description">
+            Every frame tells a story. Through decades of wilderness exploration and artistic refinement, we capture the essence of untamed landscapes, pristine moments, and the profound beauty found in nature's most remote corners.
+        </p>
+    </section>
+    
+    <section class="gallery-section" id="gallery">
+        <h2 class="section-title">Featured <span>Gallery</span></h2>
+        <p class="section-subtitle">A curated selection of recent work</p>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="gallery-placeholder">Alpine Peaks at Dawn</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">Tempest Over the Ridge</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">Forest Light & Shadow</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">Desert Horizons</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">Mountain Solitude</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">Coastal Serenity</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="collections" id="collections">
+        <div class="collections-container">
+            <h2 class="section-title">Our <span>Collections</span></h2>
+            <p class="section-subtitle">Limited edition and ongoing series</p>
+            
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <h3>Summit Series</h3>
+                    <p>Alpine peaks captured across seasons. Limited to 50 prints per location. Archival quality on museum-grade paper.</p>
+                </div>
+                <div class="collection-card">
+                    <h3>Wilderness Light</h3>
+                    <p>Golden hour and ethereal lighting in remote landscapes. Premium canvas and fine art print options available.</p>
+                </div>
+                <div class="collection-card">
+                    <h3>Elements</h3>
+                    <p>Raw power of nature: storms, water, ice, and sky. Dynamic compositions for the discerning collector.</p>
+                </div>
+                <div class="collection-card">
+                    <h3>Forest Cathedral</h3>
+                    <p>Ancient woodlands and pristine ecosystems. Intimate perspectives on nature's grandeur and complexity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about-section" id="about">
+        <h2 class="section-title">Our <span>Story</span></h2>
+        
+        <div class="about-content">
+            <h2>Decades of Vision</h2>
+            <p>
+                With over 30 years of wilderness photography experience, Perspectives from the Hart represents a commitment to capturing nature's most compelling moments. Every expedition is meticulously planned, every image carefully considered, every print produced to museum standards.
+            </p>
+            <p>
+                Our work has been featured in premier galleries, private collections, and conservation efforts worldwide. We believe that exceptional photography goes beyond documentation—it creates connection between viewer and landscape, inspiring stewardship and appreciation for our planet's wild places.
+            </p>
+            <p>
+                Each piece in our collection is a testament to patience, expertise, and an unwavering passion for the art of wilderness photography.
+            </p>
+        </div>
+    </section>
+    
+    <section class="process">
+        <div class="process-container">
+            <h2 class="section-title">Our <span>Process</span></h2>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-title">Exploration</div>
+                    <div class="step-description">Extensive wilderness scouting to identify optimal locations and conditions</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-title">Capture</div>
+                    <div class="step-description">Precision technical execution combined with artistic vision in the field</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-title">Curation</div>
+                    <div class="step-description">Meticulous selection and refined post-processing of final images</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-title">Production</div>
+                    <div class="step-description">Museum-quality printing and archival presentation of every print</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <p style="color: #8a8a8a; font-size: 1rem; margin-top: 1rem; font-style: italic;">
+                Inquiries about prints, custom commissions, and gallery showings
+            </p>
+            <a href="mailto:hello@perspectivesfromthehart.com" class="cta-button">Contact Us</a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2026 Perspectives from the Hart. All photographs &copy; Hart Collection. All rights reserved.</p>
+    </footer>
+</body>
+</html>
